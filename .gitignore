@@ -4,6 +4,5 @@ __pycache__/
 kafka/
 airflow/logs/
 airflow/tmp/
-*.db
 *.tgz
 kafka_2.13-3.6.0.tgz
