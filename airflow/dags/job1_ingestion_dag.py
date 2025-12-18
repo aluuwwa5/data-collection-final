@@ -3,7 +3,7 @@ from datetime import datetime, timedelta
 import sys
 import os
 
-# Добавляем путь к проекту ГЛОБАЛЬНО
+
 PROJECT_ROOT = '/mnt/d/final_data_collection'
 if PROJECT_ROOT not in sys.path:
     sys.path.insert(0, PROJECT_ROOT)
@@ -34,7 +34,7 @@ def news_ingestion_dag():
     @task(task_id='fetch_and_produce_news')
     def run_news_producer():
         import sys
-        # Добавляем путь ВНУТРИ task тоже
+  
         project_root = '/mnt/d/final_data_collection'
         if project_root not in sys.path:
             sys.path.insert(0, project_root)
@@ -43,8 +43,7 @@ def news_ingestion_dag():
         run_producer()
         return "News ingestion completed"
     
-    # Execute task
+
     run_news_producer()
 
-# Instantiate the DAG
 news_ingestion_dag()
