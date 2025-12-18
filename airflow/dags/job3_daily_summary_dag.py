@@ -3,7 +3,7 @@ from datetime import datetime, timedelta
 import sys
 import os
 
-# Добавляем путь к проекту ГЛОБАЛЬНО
+
 PROJECT_ROOT = '/mnt/d/final_data_collection'
 if PROJECT_ROOT not in sys.path:
     sys.path.insert(0, PROJECT_ROOT)
@@ -34,7 +34,7 @@ def daily_analytics_dag():
     @task(task_id='compute_daily_summary')
     def run_news_analytics():
         import sys
-        # Добавляем путь ВНУТРИ task тоже
+
         project_root = '/mnt/d/final_data_collection'
         if project_root not in sys.path:
             sys.path.insert(0, project_root)
@@ -43,8 +43,8 @@ def daily_analytics_dag():
         run_analytics()
         return "Analytics computation completed"
     
-    # Execute task
+
     run_news_analytics()
 
-# Instantiate the DAG
+
 daily_analytics_dag()
