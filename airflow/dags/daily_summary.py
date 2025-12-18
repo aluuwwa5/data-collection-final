@@ -1,5 +1,5 @@
 import sqlite3
-from tabulate import tabulate  # Для красивой таблички, нужно установить: pip install tabulate
+from tabulate import tabulate  
 from config import SQLITE_DB_PATH
 
 def show_daily_summary(limit=10):
