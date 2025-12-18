@@ -1,8 +1,7 @@
 
 import os
 
-# NewsData.io API Configuration
-NEWSDATA_API_KEY = "pub_5efaf91e66f94c27bcbc798111d25bf6"  # !!! ЗАМЕНИТЕ НА ВАШ КЛЮЧ !!!
+NEWSDATA_API_KEY = "pub_5efaf91e66f94c27bcbc798111d25bf6" 
 NEWSDATA_BASE_URL = "https://newsdata.io/api/1/news"
 NEWSDATA_PARAMS = {
     "apikey": NEWSDATA_API_KEY,
